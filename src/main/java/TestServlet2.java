@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import model.CountBean;
 import model.Counter;
 
-/**
- * Servlet implementation class TestServlet
- */
 @WebServlet("/test2")
 public class TestServlet2 extends HttpServlet {
 	private Counter counter = new Counter();
