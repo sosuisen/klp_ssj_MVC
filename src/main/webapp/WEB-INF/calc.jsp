@@ -9,8 +9,8 @@
 <body>
 	<h1>整数を2つ入力してね</h1>
 	<form action="calc" method="post">
-		<input type="text" name="paramA" />
-		<input type="text" name="paramB" />
+		<input type="text" name="x" />
+		<input type="text" name="y" />
 		<input type="submit" />
 	</form>
 	<table>

@@ -9,25 +9,23 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/calc")
 public class CalcServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.getRequestDispatcher("/WEB-INF/calc.jsp").forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String paramA = request.getParameter("paramA");
-		String paramB = request.getParameter("paramB");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String strX = request.getParameter("x");
+		String strY = request.getParameter("y");
 
-		int numberA = Integer.parseInt(paramA);
-		int numberB = Integer.parseInt(paramB);
-			
-		int add = numberA + numberB;
-		int sub = numberA - numberB;
-		int mul = numberA * numberB;
-		double div = (double)numberA / (double)numberB;
-		request.setAttribute("add", add);
-		request.setAttribute("sub", sub);
-		request.setAttribute("mul", mul);
-		request.setAttribute("div", div);
+		int x = Integer.parseInt(strX);
+		int y = Integer.parseInt(strY);
+
+		request.setAttribute("add", x + y);
+		request.setAttribute("sub", x - y);
+		request.setAttribute("mul", x * y);
+		request.setAttribute("div", (double) x / (double) y);
 
 		response.setContentType("text/html; charset=UTF-8");
 		request.getRequestDispatcher("/WEB-INF/calc.jsp").forward(request, response);
