@@ -18,19 +18,19 @@
 	<table>
 		<tr>
 			<td>加算：</td>
-			<td><%=request.getAttribute("add")%></td>
+			<td><%=request.getAttribute("add") != null ? request.getAttribute("add") : ""%></td>
 		</tr>
 		<tr>
 			<td>減算：</td>
-			<td><%=request.getAttribute("sub")%></td>
+			<td><%=request.getAttribute("sub") != null ? request.getAttribute("sub") : ""%></td>
 		</tr>
 		<tr>
 			<td>乗算：</td>
-			<td><%=request.getAttribute("mul")%></td>
+			<td><%=request.getAttribute("mul") != null ? request.getAttribute("mul") : ""%></td>
 		</tr>
 		<tr>
 			<td>除算：</td>
-			<td><%=request.getAttribute("div")%></td>
+			<td><%=request.getAttribute("div") != null ? request.getAttribute("div") : ""%></td>
 		</tr>
 	</table>
 </body>
