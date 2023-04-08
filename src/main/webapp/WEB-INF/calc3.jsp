@@ -12,7 +12,7 @@ FormulaBean fb = (FormulaBean)request.getAttribute("formulaBean");
 </head>
 <body>
 	<h1>整数を2つ入力してね</h1>
-	<form action="calc2" method="post">
+	<form action="calc3" method="post">
 		<input type="text" name="x" value="<%=fb.getX()%>" /> <input
 			type="text" name="y" value="<%=fb.getY()%>" /> <input type="submit" />
 	</form>
