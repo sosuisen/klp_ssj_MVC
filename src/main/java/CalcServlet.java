@@ -27,7 +27,6 @@ public class CalcServlet extends HttpServlet {
 		request.setAttribute("mul", x * y);
 		request.setAttribute("div", (double) x / (double) y);
 
-		response.setContentType("text/html; charset=UTF-8");
 		request.getRequestDispatcher("/WEB-INF/calc.jsp").forward(request, response);
 	}
 
