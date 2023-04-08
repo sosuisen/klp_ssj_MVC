@@ -31,7 +31,6 @@ public class CalcServlet2 extends HttpServlet {
 		request.setAttribute("x", x);
 		request.setAttribute("y", y);
 
-		response.setContentType("text/html; charset=UTF-8");
 		request.getRequestDispatcher("/WEB-INF/calc2.jsp").forward(request, response);
 	}
 

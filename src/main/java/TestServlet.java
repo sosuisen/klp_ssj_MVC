@@ -29,8 +29,6 @@ public class TestServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String count = request.getParameter("count");
 
-		response.setContentType("text/html; charset=UTF-8");
-
 		request.setAttribute("count", count);
 		request.getRequestDispatcher("/hello.jsp").forward(request, response);
 	}
