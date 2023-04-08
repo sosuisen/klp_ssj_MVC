@@ -1,6 +1,8 @@
 package model;
 
-@lombok.Data
+import lombok.Data;
+
+@Data
 public class FormulaBean {
 	private String x = "";
 	private String y = "";
