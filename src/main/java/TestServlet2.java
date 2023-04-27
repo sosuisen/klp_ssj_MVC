@@ -17,8 +17,6 @@ public class TestServlet2 extends HttpServlet {
 			throws ServletException, IOException {
 		String count = request.getParameter("count");
 
-		response.setContentType("text/html; charset=UTF-8");
-
 		CountBean countBean = new CountBean();
 		countBean.setCount(Integer.parseInt(count));
 		counter.execute(countBean);
